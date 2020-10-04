@@ -7,9 +7,23 @@
 
 <body>
     <h1>PrivateRedirectJS</h1>
+    <p><em>Reconstruct social links to privacy-friendly front-ends</em></p>
     <hr>
 
-    <p>TBD</p>
+    <p><strong>Instagram to <a target="_blank" href="https://github.com/cloudrac3r/bibliogram">Bibliogram</a></strong></p>
+    <textarea id="bibliogram" type="text" placeholder="Enter Instagram username:"></textarea><br>
+    <input type="submit" value="Convert to Bibliogram" onclick="privateRedirect('bibliogram', document.getElementById('bibliogram').value);">
+    <p id="bibliogram-output"></p>
+
+    <p><strong>Twitter to <a target="_blank" href="https://github.com/zedeus/nitter">nitter</a></strong></p>
+    <textarea id="nitter" type="text" placeholder="Enter Twitter username:"></textarea><br>
+    <input type="submit" value="Convert to nitter" onclick="privateRedirect('nitter', document.getElementById('nitter').value);">
+    <p id="nitter-output"></p>
+
+    <p><strong>YouTube to <a target="_blank" href="https://github.com/iv-org/invidious">Invidious</a></strong></p>
+    <textarea id="invidious" type="text" placeholder="Enter YouTube username:"></textarea><br>
+    <input type="submit" value="Convert to Invidious" onclick="privateRedirect('invidious', document.getElementById('invidious').value);">
+    <p id="invidious-output"></p>
 
     <!-- Include PrivateRedirectJS -->
     <script src="/src/privateRedirect.js"></script>
