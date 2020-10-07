@@ -5,18 +5,28 @@
 function privateRedirect(element) {
     var id = element.id;
     var outputElement = document.getElementById(id + "-output");
-    var username = element.value;
+    var input = element.value;
     outputElement.innerHTML = "";
-    if (isNotEmpty(username)) {
+    if (isNotEmpty(input)) {
         if (id == "bibliogram") {
-            outputElement.innerHTML = createLink("https://bibliogram.art/u/" + username);
+            var bibliogram = "https://bibliogram.art/";
+            var key = "p/";
+            if (input.includes(key)) {
+                outputElement.innerHTML = createLink(bibliogram + key + input.split(key)[1]);
+            } else {
+                outputElement.innerHTML = createLink(bibliogram + "u/" + input);
+            }
         } else if (id == "nitter") {
-            outputElement.innerHTML = createLink("https://nitter.net/" + username);
-        } else if (id == "invidious") {
-            // TODO
+            var nitter = "https://nitter.net/"
+            var key = "twitter.com/";
+            if (input.includes(key)) {
+                outputElement.innerHTML = createLink(nitter + input.split(key)[1]);
+            } else {
+                outputElement.innerHTML = createLink(nitter + input);
+            }
         }
     } else {
-        element.value = "";
+        reset(element);
     }
 }
 
@@ -26,4 +36,9 @@ function isNotEmpty(str) {
 
 function createLink(site) {
     return "<a target='_blank' href='" + site + "'>" + site + "</a>";
+}
+
+function reset(element) {
+    element.value = "";
+    document.getElementById(element.id + "-output").innerHTML = "";
 }

@@ -11,19 +11,16 @@
     <hr>
 
     <p><strong>Instagram to <a target="_blank" href="https://github.com/cloudrac3r/bibliogram">Bibliogram</a></strong></p>
-    <textarea id="bibliogram" type="text" placeholder="Enter Instagram username:"></textarea><br>
+    <textarea id="bibliogram" type="text" placeholder="Enter Instagram username or full direct link to post:" rows="4"></textarea><br>
     <input type="submit" value="Convert to Bibliogram" onclick="privateRedirect(document.getElementById('bibliogram'));">
     <p id="bibliogram-output"></p>
+    <input type="reset" value="Reset Bibliogram" onclick="reset(document.getElementById('bibliogram'));">
 
     <p><strong>Twitter to <a target="_blank" href="https://github.com/zedeus/nitter">nitter</a></strong></p>
-    <textarea id="nitter" type="text" placeholder="Enter Twitter username:"></textarea><br>
+    <textarea id="nitter" type="text" placeholder="Enter Twitter username or full direct link to tweet:" rows="4"></textarea><br>
     <input type="submit" value="Convert to nitter" onclick="privateRedirect(document.getElementById('nitter'));">
     <p id="nitter-output"></p>
-
-    <p><strong>YouTube to <a target="_blank" href="https://github.com/iv-org/invidious">Invidious</a></strong></p>
-    <textarea id="invidious" type="text" placeholder="Enter YouTube username:"></textarea><br>
-    <input type="submit" value="Convert to Invidious" onclick="privateRedirect(document.getElementById('invidious'));">
-    <p id="invidious-output"></p>
+    <input type="reset" value="Reset nitter" onclick="reset(document.getElementById('nitter'));">
 
     <!-- Include PrivateRedirectJS -->
     <script src="/src/privateRedirect.js"></script>
