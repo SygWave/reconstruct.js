@@ -8,7 +8,11 @@ Reconstruct social links to privacy-friendly front-ends
 
 * Twitter -> [nitter](https://github.com/zedeus/nitter)
 
-* YouTube -> [Invidious](https://github.com/iv-org/invidious)
+* **TODO:** YouTube -> [Invidious](https://github.com/iv-org/invidious)
+
+## Demo
+
+TBD
 
 ## Owner
 
