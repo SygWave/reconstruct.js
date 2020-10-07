@@ -8,7 +8,7 @@ function privateRedirect(element) {
     var outputElement = document.getElementById(id + "-output");
     var input = element.value;
 
-    outputElement.innerHTML = "";
+    outputElement.innerText = "";
 
     /*
      * If input isNotEmpty, converts Instagram links to Bibliogram or converts Twitter links to nitter
@@ -20,17 +20,17 @@ function privateRedirect(element) {
             var bibliogram = "https://bibliogram.art/";
             var key = "p/";
             if (input.includes(key)) {
-                outputElement.innerHTML = createLink(bibliogram + key + input.split(key)[1]);
+                outputElement.innerText = bibliogram + key + input.split(key)[1];
             } else {
-                outputElement.innerHTML = createLink(bibliogram + "u/" + input);
+                outputElement.innerText = bibliogram + "u/" + input;
             }
         } else if (id == "nitter") {
             var nitter = "https://nitter.net/"
             var key = "twitter.com/";
             if (input.includes(key)) {
-                outputElement.innerHTML = createLink(nitter + input.split(key)[1]);
+                outputElement.innerText = nitter + input.split(key)[1];
             } else {
-                outputElement.innerHTML = createLink(nitter + input);
+                outputElement.innerText = nitter + input;
             }
         }
     } else {
@@ -43,13 +43,8 @@ function isNotEmpty(str) {
     return !(str == "" || str === null || /\s/.test(str));
 }
 
-// Returns <a> element for passed-in site
-function createLink(site) {
-    return "<a target='_blank' href='" + site + "'>" + site + "</a>";
-}
-
-// Sets value of passed-in element and innerHTML of its according output element to empty String
+// Sets value of passed-in element and innerText of its according output element to empty String
 function reset(element) {
     element.value = "";
-    document.getElementById(element.id + "-output").innerHTML = "";
+    document.getElementById(element.id + "-output").innerText = "";
 }
