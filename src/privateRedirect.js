@@ -11,10 +11,10 @@ function privateRedirect(element) {
     outputElement.innerHTML = "";
 
     /*
-    * If input isNotEmpty, converts Instagram links to Bibliogram and/or converts Twitter links to nitter
-    * If bibliogram input contains key, the input is treated as a post, otherwise its treated as a username
-    * If nitter input contains key, the input is treated as a tweet, otherwise its treated as a username
-    */
+     * If input isNotEmpty, converts Instagram links to Bibliogram or converts Twitter links to nitter
+     * If Bibliogram input.includes(key) input is treated as a post, else treated as a username
+     * If nitter input.includes(key)  input is treated as a tweet, else treated as a username
+     */
     if (isNotEmpty(input)) {
         if (id == "bibliogram") {
             var bibliogram = "https://bibliogram.art/";
@@ -38,7 +38,7 @@ function privateRedirect(element) {
     }
 }
 
-// Returns True if passed-in str is not empty, null, or contains any spaces, tabs, etc.
+// Returns True if passed-in str is not empty, null, nor contains any spaces, tabs, etc.
 function isNotEmpty(str) {
     return !(str == "" || str === null || /\s/.test(str));
 }
@@ -48,7 +48,7 @@ function createLink(site) {
     return "<a target='_blank' href='" + site + "'>" + site + "</a>";
 }
 
-// Sets value of passed-in element and inner HTML of its according output element to empty space
+// Sets value of passed-in element and innerHTML of its according output element to empty String
 function reset(element) {
     element.value = "";
     document.getElementById(element.id + "-output").innerHTML = "";
