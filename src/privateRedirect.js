@@ -7,7 +7,7 @@ function privateRedirect(element) {
     var outputElement = document.getElementById(id + "-output");
     var username = element.value;
     outputElement.innerHTML = "";
-    if (!isEmpty(username)) {
+    if (isNotEmpty(username)) {
         if (id == "bibliogram") {
             outputElement.innerHTML = createLink("https://bibliogram.art/u/" + username);
         } else if (id == "nitter") {
@@ -20,8 +20,8 @@ function privateRedirect(element) {
     }
 }
 
-function isEmpty(str) {
-    return str == "" || str === null || /\s/.test(str);
+function isNotEmpty(str) {
+    return !(str == "" || str === null || /\s/.test(str));
 }
 
 function createLink(site) {
