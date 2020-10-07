@@ -10,6 +10,10 @@ Reconstruct social links to privacy-friendly front-ends
 
 * **TODO:** YouTube -> [Invidious](https://github.com/iv-org/invidious)
 
+## Demo
+
+https://sygwave.github.io/demos/PrivateRedirectJS
+
 ## Owner
 
 [SygWave](https://sygwave.github.io)
