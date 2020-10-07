@@ -21,7 +21,7 @@ function privateRedirect(element) {
 }
 
 function isEmpty(str) {
-    return str === null || /\s/.test(str);
+    return str == "" || str === null || /\s/.test(str);
 }
 
 function createLink(site) {
