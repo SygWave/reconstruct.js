@@ -8,11 +8,11 @@ Reconstruct social links to privacy-friendly front-ends
 
 * Twitter -> [nitter](https://github.com/zedeus/nitter)
 
-* **TODO:** YouTube -> [Invidious](https://github.com/iv-org/invidious)
+* YouTube -> [Invidious](https://github.com/iv-org/invidious)
 
 ## Demo
 
-https://sygwave.github.io/demos/PrivateRedirectJS
+[https://sygwave.github.io/demos/PrivateRedirectJS](https://sygwave.github.io/demos/PrivateRedirectJS)
 
 ## Owner
 
