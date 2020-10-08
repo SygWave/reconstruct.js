@@ -10,27 +10,46 @@ function privateRedirect(element) {
 
     outputElement.innerText = "";
 
-    /*
-     * If input isNotEmpty, converts Instagram links to Bibliogram or converts Twitter links to nitter
-     * If Bibliogram input.includes(key) input is treated as a post, else treated as a username
-     * If nitter input.includes(key)  input is treated as a tweet, else treated as a username
-     */
+    // If input isNotEmpty
     if (isNotEmpty(input)) {
+
+        // Bibliogram
         if (id == "bibliogram") {
             var bibliogram = "https://bibliogram.art/";
-            var key = "p/";
-            if (input.includes(key)) {
-                outputElement.innerText = bibliogram + key + input.split(key)[1];
+            var key = "instagram.com/";
+            // If Bibliogram input.includes(key) input is treated as profile or post
+            if (input.includes(key + "p/")) {
+                setAnchor(outputElement, bibliogram + input.split(key)[1]);
+
+            } else if (input.includes(key)) {
+                setAnchor(outputElement, bibliogram + "u/" + input.split(key)[1]);
+                // Else input is treated as username
             } else {
-                outputElement.innerText = bibliogram + "u/" + input;
+                setAnchor(outputElement, bibliogram + "u/" + input);
             }
+
+            // nitter
         } else if (id == "nitter") {
-            var nitter = "https://nitter.net/"
+            var nitter = "https://nitter.net/";
             var key = "twitter.com/";
+            // If nitter input.includes(key) input is treated as profile or tweet
             if (input.includes(key)) {
-                outputElement.innerText = nitter + input.split(key)[1];
+                setAnchor(outputElement, nitter + input.split(key)[1]);
+                // Else input is treated as username
             } else {
-                outputElement.innerText = nitter + input;
+                setAnchor(outputElement, nitter + input);
+            }
+
+            // Invidious
+        } else if (id == "invidious") {
+            var invidious = "https://invidiou.site/";
+            var key = "youtube.com/";
+            // If invidious input.includes(key) input is treated as channel or video
+            if (input.includes(key)) {
+                setAnchor(outputElement, invidious + input.split(key)[1]);
+                // Else input is treated as username
+            } else {
+                setAnchor(outputElement, invidious + "channel/" + input);
             }
         }
     } else {
@@ -38,12 +57,18 @@ function privateRedirect(element) {
     }
 }
 
-// Returns True if passed-in str is not empty, null, nor contains any spaces, tabs, etc.
+// Returns True if passed-in str is not empty, null, nor contains spaces, tabs, etc.
 function isNotEmpty(str) {
     return !(str == "" || str === null || /\s/.test(str));
 }
 
-// Sets value of passed-in element and innerText of its according output element to empty String
+// Sets innerText and href attributes of passed-in element to passed-in link
+function setAnchor(element, link) {
+    element.innerText = link;
+    element.href = link;
+}
+
+// Sets value of passed-in element and innerText of according output element to empty String
 function reset(element) {
     element.value = "";
     document.getElementById(element.id + "-output").innerText = "";
