@@ -17,10 +17,10 @@ function privateRedirect(element) {
         if (id == "bibliogram") {
             var bibliogram = "https://bibliogram.art/";
             var key = "instagram.com/";
-            // If Bibliogram input.includes(key) input is treated as profile or post
+            // If Bibliogram input.includes(key) input is treated as profile...
             if (input.includes(key + "p/")) {
                 setAnchor(outputElement, bibliogram + input.split(key)[1]);
-
+                // ...or post
             } else if (input.includes(key)) {
                 setAnchor(outputElement, bibliogram + "u/" + input.split(key)[1]);
                 // Else input is treated as username
@@ -52,6 +52,8 @@ function privateRedirect(element) {
                 setAnchor(outputElement, invidious + "channel/" + input);
             }
         }
+
+        // Else input is empty, reset(element)
     } else {
         reset(element);
     }
