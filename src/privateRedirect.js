@@ -3,59 +3,40 @@
  */
 
 // Driver function
-function privateRedirect(element) {
-    var id = element.id;
-    var outputElement = document.getElementById(id + "-output");
-    var input = element.value;
+function privateRedirect() {
+    var outputElement = document.getElementById("output");
+    var input = document.getElementById("input").value;
 
     outputElement.innerText = "";
 
     // If input isNotEmpty
     if (isNotEmpty(input)) {
+        var instagram = "instagram.com/";
+        var twitter = "twitter.com/";
+        var youtube = "youtube.com/";
 
-        // Bibliogram
-        if (id == "bibliogram") {
-            var bibliogram = "https://bibliogram.art/";
-            var key = "instagram.com/";
-            // If Bibliogram input.includes(key) input is treated as profile...
-            if (input.includes(key + "p/")) {
-                setAnchor(outputElement, bibliogram + input.split(key)[1]);
-                // ...or post
-            } else if (input.includes(key)) {
-                setAnchor(outputElement, bibliogram + "u/" + input.split(key)[1]);
-                // Else input is treated as username
-            } else {
-                setAnchor(outputElement, bibliogram + "u/" + input);
-            }
+        // Instagram -> Bibliogram
+        // If input includes Instagram URL + "p/", input is treated as Instagram profile...
+        if (input.includes(instagram + "p/")) {
+            setAnchor(outputElement, "https://bibliogram.art/" + input.split(instagram)[1]);
+        // ...Else if input includes Instagram URL, input is treated as Instagram post
+        } else if (input.includes(instagram)) { // 
+            setAnchor(outputElement, "https://bibliogram.art/u/" + input.split(instagram)[1]);
+        
+        // Twitter -> nitter
+        // Else if input includes Twitter URL, input is treated as Twitter profile or tweet
+        } else if (input.includes(twitter)) {
+            setAnchor(outputElement, "https://nitter.net/" + input.split(twitter)[1]);
 
-            // nitter
-        } else if (id == "nitter") {
-            var nitter = "https://nitter.net/";
-            var key = "twitter.com/";
-            // If nitter input.includes(key) input is treated as profile or tweet
-            if (input.includes(key)) {
-                setAnchor(outputElement, nitter + input.split(key)[1]);
-                // Else input is treated as username
-            } else {
-                setAnchor(outputElement, nitter + input);
-            }
+        // YouTube -> Invidious
+        // Else if input includes YouTube URL, input is treated as YouTube channel or video
+        } else if (input.includes(youtube)) {
+            setAnchor(outputElement, "https://invidiou.site/" + input.split(youtube)[1]);
 
-            // Invidious
-        } else if (id == "invidious") {
-            var invidious = "https://invidiou.site/";
-            var key = "youtube.com/";
-            // If invidious input.includes(key) input is treated as channel or video
-            if (input.includes(key)) {
-                setAnchor(outputElement, invidious + input.split(key)[1]);
-                // Else input is treated as username
-            } else {
-                setAnchor(outputElement, invidious + "channel/" + input);
-            }
+        // Else input is empty, reset
+        } else {
+            reset();
         }
-
-        // Else input is empty, reset(element)
-    } else {
-        reset(element);
     }
 }
 
@@ -70,8 +51,8 @@ function setAnchor(element, link) {
     element.href = link;
 }
 
-// Sets value of passed-in element and innerText of according output element to empty String
-function reset(element) {
-    element.value = "";
-    document.getElementById(element.id + "-output").innerText = "";
+// Sets value of input element and innerText of output element to empty String
+function reset() {
+    document.getElementById("input").value = "";
+    document.getElementById("output").innerText = "";
 }

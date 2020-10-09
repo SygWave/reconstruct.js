@@ -10,29 +10,17 @@
     <p><em>Reconstruct social links to privacy-friendly front-ends</em></p>
     <hr>
 
-    <p><strong>Instagram to <a target="_blank" href="https://github.com/cloudrac3r/bibliogram">Bibliogram</a></strong></p>
-    <textarea id="bibliogram" type="text" placeholder="Enter Instagram username or full direct link to profile or post:" rows="5"></textarea><br>
-    <input type="submit" value="Convert to Bibliogram" onclick="privateRedirect(document.getElementById('bibliogram'));">
-    <p>
-        <a target="_blank" id="bibliogram-output"></a>
-    </p>
-    <input type="reset" value="Reset Bibliogram" onclick="reset(document.getElementById('bibliogram'));">
+    <p><strong>Instagram to <a target="_blank" href="https://github.com/cloudrac3r/bibliogram">Bibliogram</a></strong><br><em>Enter full direct link to Instagram profile or post</em></p>
+    <p><strong>Twitter to <a target="_blank" href="https://github.com/zedeus/nitter">nitter</a></strong><br><em>Enter full direct link to Twitter profile or tweet</em></p>
+    <p><strong>YouTube to <a target="_blank" href="https://github.com/iv-org/invidious">Invidious</a></strong><br><em>Enter full direct link to YouTube channel or video</em></p>
 
-    <p><strong>Twitter to <a target="_blank" href="https://github.com/zedeus/nitter">nitter</a></strong></p>
-    <textarea id="nitter" type="text" placeholder="Enter Twitter username or full direct link to profile or tweet:" rows="5"></textarea><br>
-    <input type="submit" value="Convert to nitter" onclick="privateRedirect(document.getElementById('nitter'));">
+    <p><input id="input" type="text"></p>
     <p>
-        <a target="_blank" id="nitter-output"></a>
+        <input type="submit" value="Convert" onclick="privateRedirect();">
+        <input type="reset" value="Clear" onclick="reset();">
     </p>
-    <input type="reset" value="Reset nitter" onclick="reset(document.getElementById('nitter'));">
-
-    <p><strong>YouTube to <a target="_blank" href="https://github.com/iv-org/invidious">Invidious</a></strong></p>
-    <textarea id="invidious" type="text" placeholder="Enter YouTube username or full direct link to channel or video:" rows="5"></textarea><br>
-    <input type="submit" value="Convert to Invidious" onclick="privateRedirect(document.getElementById('invidious'));">
-    <p>
-        <a target="_blank" id="invidious-output"></a>
-    </p>
-    <input type="reset" value="Reset Invidiouos" onclick="reset(document.getElementById('invidious'));">
+    <p></p>
+    <p><a target="_blank" id="output"></a></p>
 
     <!-- Include PrivateRedirectJS -->
     <script src="/src/privateRedirect.js"></script>
