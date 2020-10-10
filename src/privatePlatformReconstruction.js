@@ -2,10 +2,17 @@
  * Reconstruct social links to privacy-friendly front-ends
  */
 
+// Submit input if user releases "Enter" key
+document.getElementById("input").addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        privatePlatformReconstruction();
+    }
+});
+
 // Driver function
 function privatePlatformReconstruction() {
     var outputElement = document.getElementById("output");
-    var input = document.getElementById("input").value;
+    var input = document.getElementById("input").value.toLowerCase();
 
     outputElement.innerText = "";
 
@@ -19,21 +26,21 @@ function privatePlatformReconstruction() {
         // If input includes Instagram URL + "p/", input is treated as Instagram profile...
         if (input.includes(instagram + "p/")) {
             setAnchor(outputElement, "https://bibliogram.art/" + input.split(instagram)[1]);
-        // ...Else if input includes Instagram URL, input is treated as Instagram post
+            // ...Else if input includes Instagram URL, input is treated as Instagram post
         } else if (input.includes(instagram)) { // 
             setAnchor(outputElement, "https://bibliogram.art/u/" + input.split(instagram)[1]);
-        
-        // Twitter -> nitter
-        // Else if input includes Twitter URL, input is treated as Twitter profile or tweet
+
+            // Twitter -> nitter
+            // Else if input includes Twitter URL, input is treated as Twitter profile or tweet
         } else if (input.includes(twitter)) {
             setAnchor(outputElement, "https://nitter.net/" + input.split(twitter)[1]);
 
-        // YouTube -> Invidious
-        // Else if input includes YouTube URL, input is treated as YouTube channel or video
+            // YouTube -> Invidious
+            // Else if input includes YouTube URL, input is treated as YouTube channel or video
         } else if (input.includes(youtube)) {
             setAnchor(outputElement, "https://invidiou.site/" + input.split(youtube)[1]);
 
-        // Else input is empty, reset
+            // Else input is empty, reset
         } else {
             reset();
         }
