@@ -3,7 +3,7 @@
  */
 
 // Driver function
-function privateRedirect() {
+function privatePlatformReconstruction() {
     var outputElement = document.getElementById("output");
     var input = document.getElementById("input").value;
 
@@ -40,18 +40,18 @@ function privateRedirect() {
     }
 }
 
-// Returns True if passed-in str is not empty, null, nor contains spaces, tabs, etc.
+// Return True if passed-in str is not empty, null, nor contains spaces, tabs, etc.
 function isNotEmpty(str) {
     return !(str == "" || str === null || /\s/.test(str));
 }
 
-// Sets innerText and href attributes of passed-in element to passed-in link
+// Set innerText and href attributes of passed-in element to passed-in link
 function setAnchor(element, link) {
     element.innerText = link;
     element.href = link;
 }
 
-// Sets value of input element and innerText of output element to empty String
+// Set value of input element and innerText of output element to empty String
 function reset() {
     document.getElementById("input").value = "";
     document.getElementById("output").innerText = "";
