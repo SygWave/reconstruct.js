@@ -20,7 +20,7 @@ Enter full direct link to YouTube channel or video
 
 ---
 
-Note that this project relies on the URL naming conventions of Bibliogram, nitter, and Invidious to remain unchanged. Reconstructed links will break if any of those front-ends' URL naming conventions are altered 
+Note that this project relies on the URL naming conventions of Bibliogram, nitter and Invidious to remain unchanged. Reconstructed links will break if any of those front-ends' URL naming conventions are altered 
 
 ## Owner
 
