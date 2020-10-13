@@ -31,10 +31,6 @@ input {
     text-align: center;
 }
 
-#help {
-    text-align: right;
-}
-
 #help span {
     color: cyan;
     text-decoration: underline;
