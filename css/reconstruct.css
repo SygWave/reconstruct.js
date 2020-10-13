@@ -1,0 +1,47 @@
+textarea {
+    background-color: black;
+    color: green;
+    border: 1px solid green;
+    font-family: "Lucida Console", Courier, monospace;
+}
+
+input {
+    background-color: black;
+    color: green;
+    border: 1px solid green;
+    font-family: "Lucida Console", Courier, monospace;
+}
+
+.buttons {
+    color: cyan;
+    border: 1px solid cyan;
+}
+
+.buttons:hover {
+    cursor: pointer;
+    color: purple;
+    background-color: cyan;
+}
+
+#input {
+    width: 100%;
+}
+
+#output {
+    text-align: center;
+}
+
+#help {
+    text-align: right;
+}
+
+#help span {
+    color: cyan;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#instructions {
+    display: none;
+    text-align: right;
+}
