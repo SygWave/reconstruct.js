@@ -5,12 +5,12 @@
 // Submit input if user releases "Enter" key
 document.getElementById("input").addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
-        privatePlatformReconstruction();
+        reconstruct();
     }
 });
 
 // Driver function
-function privatePlatformReconstruction() {
+function reconstruct() {
     var outputElement = document.getElementById("output");
     var input = document.getElementById("input").value.toLowerCase();
 
