@@ -35,6 +35,11 @@ input {
     text-align: right;
 }
 
+#help:hover {
+    color: purple;
+    background-color: cyan;
+}
+
 #help span {
     color: cyan;
     text-decoration: underline;
