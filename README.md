@@ -1,10 +1,8 @@
-# PrivatePlatformReconstructionJS 🔒
+# reconstruct.js 🔒
 
 Reconstruct social links to privacy-friendly front-ends
 
 ## About
-
-Deployed at [https://sygwave.github.io/PrivatePlatformReconstructionJS/](https://sygwave.github.io/PrivatePlatformReconstructionJS/)
 
 ### Instagram -> [Bibliogram](https://github.com/cloudrac3r/bibliogram)
 
