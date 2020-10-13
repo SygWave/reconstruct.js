@@ -22,4 +22,4 @@ Note that this project relies on the URL naming conventions of Bibliogram, nitte
 
 ## Owner
 
-[SygWave](https://sygwave.github.io)
+SygWave
