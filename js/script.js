@@ -50,6 +50,7 @@ function appendAnchor(element, link) {
     newAnchor.id = "new-anchor";
     newAnchor.innerText = link;
     newAnchor.href = link;
+    newAnchor.target = "_blank";
 
     removeChildren(element);
     element.append(newAnchor);
