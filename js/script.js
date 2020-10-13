@@ -51,13 +51,23 @@ function appendAnchor(element, link) {
     newAnchor.innerText = link;
     newAnchor.href = link;
 
+    removeChildren(element);
     element.append(newAnchor);
 }
 
 // Set value of input element to empty String and remove child anchor element
 function reset() {
     document.getElementById("input").value = "";
-    document.getElementById("output").removeChild(document.getElementById("new-anchor"));
+    removeChildren(document.getElementById("output"));
+}
+
+// Remove anchor elements from passed-in element
+function removeChildren(element) {
+    for (var childNode of element.childNodes) {
+        if (childNode.id === "new-anchor") {
+            element.removeChild(childNode);
+        }
+    }
 }
 
 // Show instructions
