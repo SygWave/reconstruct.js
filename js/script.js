@@ -5,7 +5,7 @@
 // Driver function
 function reconstruct() {
     var outputElement = document.getElementById("output");
-    var input = document.getElementById("input").value.toLowerCase();
+    var input = document.getElementById("input").value;
 
     // If input isNotEmpty
     if (isNotEmpty(input)) {
