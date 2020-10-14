@@ -21,7 +21,7 @@ function reconstruct() {
         } else if (input.includes(instagram)) { // 
             appendAnchor(outputElement, "https://bibliogram.art/u/" + input.split(instagram)[1]);
 
-            // Twitter -> nitter
+            // Twitter -> Nitter
             // Else if input includes Twitter URL, input is treated as Twitter profile or tweet
         } else if (input.includes(twitter)) {
             appendAnchor(outputElement, "https://nitter.net/" + input.split(twitter)[1]);

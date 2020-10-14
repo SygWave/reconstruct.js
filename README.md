@@ -8,7 +8,7 @@ Reconstruct social links to privacy-friendly front-ends
 
 Enter full direct link to Instagram profile or post
 
-### Twitter -> [nitter](https://github.com/zedeus/nitter)
+### Twitter -> [Nitter](https://github.com/zedeus/nitter)
 
 Enter full direct link to Twitter profile or tweet
 
