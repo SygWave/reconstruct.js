@@ -71,7 +71,7 @@ function removeChildren(element) {
     }
 }
 
-// Show instructions
+// Show or hide instructions
 function help(id) {
     var elementStyle = document.getElementById(id).style;
     const block = "block";
