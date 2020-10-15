@@ -4,34 +4,39 @@
 
 // Driver function
 function reconstruct() {
-    var outputElement = document.getElementById("output");
-    var input = document.getElementById("input").value;
+    let outputElement = document.getElementById("output");
+    let input = document.getElementById("input").value;
 
     // If input isNotEmpty
     if (isNotEmpty(input)) {
-        const instagram = "instagram.com/";
-        const twitter = "twitter.com/";
-        const youtube = "youtube.com/";
+        const instagram = "instagram";
+        const twitter = "twitter";
+        const youtube = "youtube";
+        const com = ".com/";
+        let platform = input.split(com)[0];
+        let platformLowerCase = platform.toLowerCase();
+        let subdirectory = input.split(com)[1];
+        let key = input.split(platform + com)[1];
 
         // Instagram -> Bibliogram
-        // If input includes Instagram URL + "p/", input is treated as Instagram profile...
-        if (input.includes(instagram + "p/")) {
-            appendAnchor(outputElement, "https://bibliogram.art/" + input.split(instagram)[1]);
-            // ...Else if input includes Instagram URL, input is treated as Instagram post
-        } else if (input.includes(instagram)) { // 
-            appendAnchor(outputElement, "https://bibliogram.art/u/" + input.split(instagram)[1]);
+        // If platformLowerCase.includes(instagram) and subdirectory.includes("p/") input is treated as Instagram profile...
+        if (platformLowerCase.includes(instagram) && subdirectory.includes("p/")) {
+            appendAnchor(outputElement, "https://bibliogram.art/" + key);
+            // ...Else if platformLowerCase.includes(instagram) input is treated as Instagram post
+        } else if (platformLowerCase.includes(instagram)) { // 
+            appendAnchor(outputElement, "https://bibliogram.art/u/" + key);
 
             // Twitter -> Nitter
-            // Else if input includes Twitter URL, input is treated as Twitter profile or tweet
-        } else if (input.includes(twitter)) {
-            appendAnchor(outputElement, "https://nitter.net/" + input.split(twitter)[1]);
+            // Else if platformLowerCase.includes(twitter) input is treated as Twitter profile or tweet
+        } else if (platformLowerCase.includes(twitter)) {
+            appendAnchor(outputElement, "https://nitter.net/" + key);
 
             // YouTube -> Invidious
-            // Else if input includes YouTube URL, input is treated as YouTube channel or video
-        } else if (input.includes(youtube)) {
-            appendAnchor(outputElement, "https://invidious.site/" + input.split(youtube)[1]);
+            // Else if platformLowerCase.includes(youtube) input is treated as YouTube channel or video
+        } else if (platformLowerCase.includes(youtube)) {
+            appendAnchor(outputElement, "https://invidious.site/" + key);
 
-            // Else input is empty, reset
+            // Else reset()
         } else {
             reset();
         }
@@ -45,7 +50,7 @@ function isNotEmpty(str) {
 
 // Set new anchor element to passed-in link and append to passed-in element
 function appendAnchor(element, link) {
-    var newAnchor = document.createElement("a");
+    let newAnchor = document.createElement("a");
 
     newAnchor.id = "new-anchor";
     newAnchor.innerText = link;
@@ -56,7 +61,7 @@ function appendAnchor(element, link) {
     element.append(newAnchor);
 }
 
-// Set value of input element to empty String and remove child anchor element
+// Set value of input element to empty String and removeChildren()
 function reset() {
     document.getElementById("input").value = "";
     removeChildren(document.getElementById("output"));
@@ -73,12 +78,11 @@ function removeChildren(element) {
 
 // Show or hide instructions
 function help(id) {
-    var elementStyle = document.getElementById(id).style;
-    const block = "block";
+    let elementStyle = document.getElementById(id).style;
 
-    if (elementStyle.display === block) {
+    if (elementStyle.display === "block") {
         elementStyle.display = "none";
     } else {
-        elementStyle.display = block;
+        elementStyle.display = "block";
     }
 }
