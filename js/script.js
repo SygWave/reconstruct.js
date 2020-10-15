@@ -69,7 +69,7 @@ function reset() {
 
 // Remove anchor elements from passed-in element
 function removeChildren(element) {
-    for (var childNode of element.childNodes) {
+    for (let childNode of element.childNodes) {
         if (childNode.id === "new-anchor") {
             element.removeChild(childNode);
         }
