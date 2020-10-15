@@ -86,3 +86,10 @@ function help(id) {
         elementStyle.display = "block";
     }
 }
+
+// Run reconstruct() on "keydown" of "Enter" in input when "keydown" of "Shift" is False
+document.getElementById("input").addEventListener("keydown", function(event) {
+    if (event.keyCode === 13 && event.shiftKey === false) {
+        reconstruct();
+    }
+});
