@@ -2,6 +2,8 @@
 
 Reconstruct social links to privacy-friendly front-ends
 
+[sygwave.github.io/reconstruct.js/](sygwave.github.io/reconstruct.js/)
+
 ## About
 
 ### Instagram -> [Bibliogram](https://github.com/cloudrac3r/bibliogram)
