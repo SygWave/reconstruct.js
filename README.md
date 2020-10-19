@@ -6,33 +6,47 @@ Reconstruct social links to privacy-friendly front-ends
 
 ### Instagram -> [Bibliogram](https://github.com/cloudrac3r/bibliogram)
 
-Enter full direct link to Instagram profile or post
-
-#### Instagram Test Cases
-
-* [https://www.instagram.com/instagram/?hl=en](https://www.instagram.com/instagram/?hl=en) -> [https://bibliogram.art/u/instagram/?hl=en](https://bibliogram.art/u/instagram/?hl=en)
-
-* [https://www.instagram.com/p/CGIxEaWD69G/](https://www.instagram.com/p/CGIxEaWD69G/) -> [https://bibliogram.art/p/CGIxEaWD69G/](https://bibliogram.art/p/CGIxEaWD69G/)
+* Enter full direct link to Instagram profile or post
 
 ### Twitter -> [Nitter](https://github.com/zedeus/nitter)
 
-Enter full direct link to Twitter profile or tweet
-
-#### Twitter Test Cases
-
-* [https://twitter.com/twitter](https://twitter.com/twitter) -> [https://nitter.net/twitter](https://nitter.net/twitter)
-
-* [https://twitter.com/Twitter/status/1308132903830925313](https://twitter.com/Twitter/status/1308132903830925313) -> [https://nitter.net/Twitter/status/1308132903830925313](https://nitter.net/Twitter/status/1308132903830925313)
+* Enter full direct link to Twitter profile or tweet
 
 ### YouTube -> [Invidious](https://github.com/iv-org/invidious)
 
-Enter full direct link to YouTube channel or video
+* Enter full direct link to YouTube channel or video
 
-#### YouTube Test Cases
+## Test Cases
 
-* [https://www.youtube.com/user/YouTube](https://www.youtube.com/user/YouTube) -> [https://invidious.site/channel/YouTube](https://invidious.site/channel/YouTube)
+* To test for bugs, try converting links:
 
-* [https://www.youtube.com/watch?v=IPLaajIJq8M](https://www.youtube.com/watch?v=IPLaajIJq8M) -> [https://invidious.site/watch?v=IPLaajIJq8M](https://invidious.site/watch?v=IPLaajIJq8M)
+  * With random capitalization in the platform name, and/or...
+  
+  * ...with(out) parentheses at the end, and/or...
+  
+  * ...with extra URL query parameters at the end, and/or...
+  
+  * ...with tracking information at the end
+  
+* If you come across any bugs, please create an issue or submit a pull request!
+
+### Instagram Test Links
+
+    https://www.instagram.com/instagram/?hl=en -> https://bibliogram.art/u/instagram/?hl=en
+
+    https://www.instagram.com/p/CGIxEaWD69G/ -> https://bibliogram.art/p/CGIxEaWD69G/
+    
+### Twitter Test Links
+
+    https://twitter.com/twitter -> https://nitter.net/twitter
+
+    https://twitter.com/Twitter/status/1308132903830925313 -> https://nitter.net/Twitter/status/1308132903830925313
+    
+### YouTube Test Links
+
+    https://www.youtube.com/user/YouTube -> https://invidious.site/channel/YouTube
+
+    https://www.youtube.com/watch?v=IPLaajIJq8M -> https://invidious.site/watch?v=IPLaajIJq8M
 
 ## Owner
 
