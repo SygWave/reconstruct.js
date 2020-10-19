@@ -18,7 +18,7 @@ Reconstruct social links to privacy-friendly front-ends
 
 * Enter full direct link to YouTube channel or video
 
-## Test Cases
+## Testing
 
 * To test for bugs, try converting links:
 
