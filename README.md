@@ -30,7 +30,7 @@ Reconstruct social links to privacy-friendly front-ends
   
   * ...with tracking information at the end
   
-* If you come across any bugs, please create an issue or submit a pull request!
+* If you come across a bug, please create an issue and/or submit a pull request!
 
 ### Instagram Test Links
 
