@@ -8,29 +8,29 @@ Reconstruct social links to privacy-friendly front-ends
 
 ### Instagram -> [Bibliogram](https://github.com/cloudrac3r/bibliogram)
 
-* Enter full direct link to Instagram profile or post
+Enter full direct link to Instagram profile or post
 
 ### Twitter -> [Nitter](https://github.com/zedeus/nitter)
 
-* Enter full direct link to Twitter profile or tweet
+Enter full direct link to Twitter profile or tweet
 
 ### YouTube -> [Invidious](https://github.com/iv-org/invidious)
 
-* Enter full direct link to YouTube channel or video
+Enter full direct link to YouTube channel or video
 
 ## Testing
 
-* To test for bugs, try converting links:
+To test for bugs, try converting links:
 
-  * With random capitalization in the platform name, and/or...
+* With random capitalization in the platform name, and/or...
   
-  * ...with(out) a forward slash at the end, and/or...
+* ...with(out) a forward slash at the end, and/or...
   
-  * ...with URL query parameters at the end, and/or...
+* ...with URL query parameters at the end, and/or...
   
-  * ...with tracking information at the end
+* ...with tracking information at the end
   
-* If you come across a bug, please create an issue and/or submit a pull request!
+If you come across a bug, please create an issue and/or submit a pull request!
 
 ### Instagram Test Links
 
