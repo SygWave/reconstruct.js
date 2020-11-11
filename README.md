@@ -2,7 +2,7 @@
 
 Reconstruct social links to privacy-friendly front-ends
 
-[sygwave.github.io/reconstruct.js/](sygwave.github.io/reconstruct.js/)
+[sygwave.github.io/reconstruct.js/](https://sygwave.github.io/reconstruct.js/)
 
 ## Overview
 
