@@ -10,6 +10,7 @@ function reconstruct() {
     // If input isNotEmpty
     if (isNotEmpty(input)) {
         const instagram = "instagram";
+        const reddit = "reddit";
         const twitter = "twitter";
         const youtube = "youtube";
         const com = ".com/";
@@ -25,6 +26,11 @@ function reconstruct() {
             // ...Else if platformLowerCase.includes(instagram) input is treated as Instagram post
         } else if (platformLowerCase.includes(instagram)) { // 
             appendAnchor(outputElement, "https://bibliogram.art/u/" + key);
+
+            // Reddit -> Teddit
+            // Else if platformLowerCase.includes(reddit) input is treated as Reddit post or subreddit
+        } else if (platformLowerCase.includes(reddit)) {
+            appendAnchor(outputElement, "https://teddit.net/" + key);
 
             // Twitter -> Nitter
             // Else if platformLowerCase.includes(twitter) input is treated as Twitter profile or tweet
