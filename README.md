@@ -12,7 +12,7 @@ Enter full direct link to Instagram profile or post
 
 ### Reddit -> [Teddit](https://codeberg.org/teddit/teddit)
 
-Enter full direct link to Reddit post or subreddit
+Enter full direct link to Reddit subreddit or post
 
 ### Twitter -> [Nitter](https://github.com/zedeus/nitter)
 

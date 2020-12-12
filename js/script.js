@@ -28,7 +28,7 @@ function reconstruct() {
             appendAnchor(outputElement, "https://bibliogram.art/u/" + key);
 
             // Reddit -> Teddit
-            // Else if platformLowerCase.includes(reddit) input is treated as Reddit post or subreddit
+            // Else if platformLowerCase.includes(reddit) input is treated as Reddit subreddit or post
         } else if (platformLowerCase.includes(reddit)) {
             appendAnchor(outputElement, "https://teddit.net/" + key);
 
