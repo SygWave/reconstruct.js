@@ -44,6 +44,7 @@ function reconstruct() {
 
             // Else reset()
         } else {
+            alert(input + " is not an accepted link. If you believe this is a bug, create an issue or submit a pull request at https://github.com/SygWave/reconstruct.js");
             reset();
         }
     }
@@ -84,12 +85,15 @@ function removeChildren(element) {
 
 // Show or hide instructions
 function help(id) {
-    let elementStyle = document.getElementById(id).style;
+    let instructionsStyle = document.getElementById(id).style;
+    let helpElement = document.getElementById("help");
 
-    if (elementStyle.display === "block") {
-        elementStyle.display = "none";
+    if (instructionsStyle.display === "block") {
+        instructionsStyle.display = "none";
+        helpElement.children[0].innerText = "Help?"
     } else {
-        elementStyle.display = "block";
+        instructionsStyle.display = "block";
+        helpElement.children[0].innerText = "Hide Help?"
     }
 }
 
